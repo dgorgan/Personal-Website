@@ -3,27 +3,45 @@
 
 <head>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115024729-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-115024729-1');
+    </script>
+
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Personal Website and Blog of Dumitru Gorgan. Website. Blog. Portfolio. Developer.">
+    <meta name="description" content="Personal Website of Dumitru Gorgan - Front-End Developer.">
     <meta name="author" content="Dumitru Gorgan">
+    <meta name="og:title" content="Dumitru Gorgan | Front-End Developer">
+	<meta name="og:description" content="Personal Website of Dumitru Gorgan - Front-End Developer.">
 
-    <title>Dumitru Gorgan - Web Developer</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="img/icons//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/icons//favicon-16x16.png">
+
+    <title>Dumitru Gorgan - Front-End Developer</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'> -->
+    <!-- <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'> -->
+    <link href="https://fonts.googleapis.com/css?family=Cousine:400,400i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,700" rel="stylesheet">
 
     <!-- Plugin CSS -->
     <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="css/creative.min.css" rel="stylesheet">
+    <link href="css/creative.min.css?v=2" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -73,8 +91,7 @@
             <div class="header-content-inner">
                 <h1 id="homeHeading">Hello there,</h1>
                 <hr>
-                <p>My name is Dumitru "Dimitri" Gorgan. <br> I'm a developer, aspiring
-                  designer, and craft beer enthusiast.
+                <p>My name is Dumitru "Dimitri" Gorgan. <br> I'm a developer, gamer, and craft beer fan.
                 </p>
                 <a href="#about" class="btn btn-primary btn-xl page-scroll">Take me away</a>
             </div>
@@ -85,14 +102,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">I've got what you need!</h2>
+                    <h2 class="section-heading">I've got what you need</h2>
                     <hr class="light">
                     <p class="text-faded">A graduate of General Assembly in Washington,
                        D.C. - an immersive, global web application development bootcamp -
                         I have a keen eye for detail and a passion for perfection. I've worked
-                        extensively with HTML5, CSS3, JavaScript (ES5 & ES6), jQuery, BootStrap,
-                        Ruby on Rails, Shopify, Git, and more.
-                      </p>
+                        extensively with HTML5, CSS3, JavaScript (ES5 & ES6), jQuery, React, BootStrap,
+                        Ruby on Rails, Shopify, Git, and more.<br><strong><i>Startup and agency experience included!</i></strong>
+                    </p>
                     <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Tell me more!</a>
                 </div>
             </div>
@@ -110,38 +127,67 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-6 text-center">
+                <div class="col-lg-3 col-md-6 col-xs-6 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x fa-code text-primary sr-icons"></i>
                         <h3>Front End</h3>
-                        <p class="text-muted">HTML5, CSS3, JavaScript, jQuery, Angular.JS,
-                          Responsive Web Design, CMS.
+                        <p class="text-muted">
+                            <ul class="inline-list text-muted">
+                                <li>HTML5</li>
+                                <li>CSS3/SCSS</li>
+                                <li>Javascript</li>
+                                <li>Wordpress Themes</li>
+                                <li>Responsive Design</li>
+                                <li>HTML Emails</li>
+                                <li>React</li>
+                            </ul>
+                            <!-- HTML5, CSS3, JavaScript, jQuery, ES6, React,
+                              Responsive Web Design, Wordpress, CMS. -->
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
+                <div class="col-lg-3 col-md-6 col-xs-6 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x fa-database text-primary sr-icons"></i>
                         <h3>Back End</h3>
-                        <p class="text-muted">Ruby on Rails, Node.JS, Express.JS,
-                           MongoDB, MySQL, PostgreSQL, Heroku.  </p>
+                        <ul class="inline-list text-muted">
+                            <li>PHP</li>
+                            <li>MySQL</li>
+                            <li>PostgreSQL</li>
+                            <li>Ruby On Rails</li>
+                            <li>Express.JS</li>
+                            <li>Node.JS</li>
+                        </ul>
+                        <!-- <p class="text-muted">Ruby on Rails, Node.JS, Express.JS,
+                           MongoDB, MySQL, PostgreSQL, Heroku.  </p> -->
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
+                <div class="col-lg-3 col-md-6 col-xs-6 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x fa-paint-brush text-primary sr-icons"></i>
                         <h3>Design & UX</h3>
-                        <p class="text-muted">Basic expertise in Mockups, Wireframes,
-                           Prototypes, User Stories, and A/B testing. </p>
+                        <ul class="inline-list text-muted">
+                            <li>Sketch</li>
+                            <li>Photoshop</li>
+                            <li>Basic Wireframes</li>
+                        </ul>
+                        <!-- <p class="text-muted">Photoshop, Sketch, and basic expertise in Mockups, Wireframes,
+                           and Prototypes.</p> -->
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
+                <div class="col-lg-3 col-md-6 col-xs-6 text-center clearfix">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-heart text-primary sr-icons"></i>
-                        <h3>Made with Love</h3>
-                        <p class="text-muted">Always carefully planed and expertly executed;
+                        <i class="fa fa-4x fa-eye text-primary sr-icons"></i>
+                        <h3>Planning</h3>
+                        <ul class="inline-list text-muted">
+                            <li>Version Control</li>
+                            <li>Litmus email testing</li>
+                            <li>BrowserStack web testing</li>
+                        </ul>
+                        <!-- <p class="text-muted">
+                        Always carefully planed and expertly executed;
                           My OCD won't rest until your website is flawless.
-                        </p>
+                        </p> -->
                     </div>
                 </div>
             </div>
@@ -150,55 +196,235 @@
 
     <section class="no-padding" id="portfolio">
         <div class="container-fluid">
-            <div class="row no-gutter popup-gallery">
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/three-jerks-jerky.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/three-jerks-jerky-thumb.jpg" class="img-responsive" alt="">
+            <div class="row flex-row no-gutter popup-gallery">
+                <div class="flex-col">
+                    <a href="img/portfolio/fullsize/telosid-full.png" title="None" data-url="javascript:void(0)" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/telosid-thumb.png" class="img-responsive" alt="TelosID HP">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
                                     Client Project
                                 </div>
                                 <div class="project-name">
-                                    Three Jerks Jerky - 3 for $30 Page
+                                    TelosID Landing Page
                                 </div>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/twentythree9.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/twentythree9-thumb.jpg" class="img-responsive" alt="">
+                <div class="flex-col">
+                    <a href="img/portfolio/fullsize/deltek-full.png" title="None" data-url="javascript:void(0)" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/deltek-thumb.png" class="img-responsive" alt="Deltek ROI Calculator">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
                                     Client Project
                                 </div>
                                 <div class="project-name">
-                                    TwentyThree9 - Full Build Custom Site
+                                    Deltek ROI Calculator
                                 </div>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/puracy-bundle.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/puracy-thumb.jpg" class="img-responsive" alt="">
+                <div class="flex-col">
+                    <a href="img/portfolio/fullsize/idvetting-full.png" title="View Site" data-url="https://enroll.idvetting.com/" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/idvetting-thumb.png" class="img-responsive" alt="IDVetting">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
                                     Client Project
                                 </div>
                                 <div class="project-name">
-                                    Puracy - Build Your Own Bundle Page
+                                    IDVetting
                                 </div>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/mydoc.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/mydoc-thumb.jpg" class="img-responsive" alt="">
+                <div class="flex-col">
+                    <a href="img/portfolio/fullsize/youversion-full.png" title="View Site" data-url="https://bible.com/2017" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/youversion-thumb.png" class="img-responsive" alt="YouVersion 2017 Year In Review">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Client Project
+                                </div>
+                                <div class="project-name">
+                                    YouVersion - 2017 Year In Review
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex-col">
+                    <a href="img/portfolio/fullsize/sentientgroup-full.png" title="View Site" data-url="https://sentientgroup.com/" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/sentientgroup-thumb.png" class="img-responsive" alt="Sentient Group">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Client Project
+                                </div>
+                                <div class="project-name">
+                                    Sentient Group
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex-col">
+                    <a href="img/portfolio/fullsize/pathway-full.png" title="None" data-url="javascript:void(0)" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/pathway-thumb.png" class="img-responsive" alt="Pathway">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Client Project
+                                </div>
+                                <div class="project-name">
+                                    Pathway
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex-col">
+                    <a href="img/portfolio/fullsize/hungry-full.png" title="View Site" data-url="http://tryhungry.com/" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/hungry-thumb.png" class="img-responsive" alt="Hungry Marketplace">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Startup Company
+                                </div>
+                                <div class="project-name">
+                                    Hungry Marketplace
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex-col">
+                    <a href="img/portfolio/fullsize/idvetting-styleguide-full.png" title="None" data-url="javascript:void(0)" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/idvetting-styleguide-thumb.png" class="img-responsive" alt="IDVetting Styleguide">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Client Project
+                                </div>
+                                <div class="project-name">
+                                    IDVetting Style Guide
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex-col">
+                    <a href="img/portfolio/fullsize/ipvanguard-full.png" title="None" data-url="javascript:void(0)" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/ipvanguard-thumb.png" class="img-responsive" alt="IP Vanguard">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Client Project
+                                </div>
+                                <div class="project-name">
+                                    IP Vanguard
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex-col">
+                    <a href="img/portfolio/fullsize/acs-india-full.png" title="None" data-url="javascript:void(0)" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/acs-india-thumb.png" class="img-responsive" alt="ACS Industry Symposium">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Client Project (HTML Email)
+                                </div>
+                                <div class="project-name">
+                                    ACS Industry Symposium
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex-col">
+                    <a href="img/portfolio/fullsize/national-meeting-full.png" title="None" data-url="javascript:void(0)" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/national-meeting-thumb.png" class="img-responsive" alt="ACS National Meeting">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Client Project (HTML Email)
+                                </div>
+                                <div class="project-name">
+                                    ACS National Meeting
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex-col">
+                    <a href="img/portfolio/fullsize/navigator-full.png" title="None" data-url="javascript:void(0)" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/navigator-thumb.png" class="img-responsive" alt="ACS Career Navigator">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Client Project (HTML Email)
+                                </div>
+                                <div class="project-name">
+                                    ACS Career Navigator
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex-col">
+                    <a href="img/portfolio/fullsize/three-jerks-jerky.jpg" title="View Site" data-url="https://threejerksjerky.com" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/three-jerks-jerky-thumb.jpg" class="img-responsive" alt="Three Jerks Jerky">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Client Project
+                                </div>
+                                <div class="project-name">
+                                    Three Jerks Jerky
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex-col">
+                    <a href="img/portfolio/fullsize/twentythree9.jpg" title="Twenty Three 9" data-url="javascript:void(0)" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/twentythree9-thumb.jpg" class="img-responsive" alt="Twenty Three 9">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Client Project
+                                </div>
+                                <div class="project-name">
+                                    TwentyThree9
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex-col">
+                    <a href="img/portfolio/fullsize/puracy-bundle.jpg" title="View Site" data-url="https://puracy.com/pages/subscription" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/puracy-thumb.jpg" class="img-responsive" alt="Puracy">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Client Project
+                                </div>
+                                <div class="project-name">
+                                    Puracy
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex-col">
+                    <a href="img/portfolio/fullsize/mydoc.jpg" title="MyDoc" data-url="javsascript:void(0)" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/mydoc-thumb.jpg" class="img-responsive" alt="MyDoc">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
@@ -211,9 +437,9 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/lounge.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/lounge-thumb.jpg" class="img-responsive" alt="">
+                <div class="flex-col">
+                    <a href="img/portfolio/fullsize/lounge.jpg" title="Lounge" data-url="javascript:void(0)" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/lounge-thumb.jpg" class="img-responsive" alt="Lounge">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
@@ -226,9 +452,9 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/war.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/war-thumb.jpg" class="img-responsive" alt="">
+                <div class="flex-col">
+                    <a href="img/portfolio/fullsize/war.jpg" title="View App" data-url="http://dgorgan.github.io/war/" class="portfolio-box" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/war-thumb.jpg" class="img-responsive" alt="War">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
@@ -265,7 +491,7 @@
                 </div>
                 <div class="col-lg-4 col-lg-offset-2 text-center">
                     <i class="fa fa-phone fa-3x sr-contact"></i>
-                    <p>703-732-5562</p>
+                    <p><a href="tel:7037325562">703-732-5562</a></p>
                 </div>
                 <div class="col-lg-4 text-center">
                     <i class="fa fa-envelope-o fa-3x sr-contact"></i>
@@ -282,7 +508,7 @@
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 

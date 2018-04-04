@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:v="urn:schemas-microsoft-com:vml"
+ xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115024729-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-115024729-1');
+    </script>
+
+    <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+
+    <!-- Web Font / @font-face : BEGIN -->
+	<!-- NOTE: If web fonts are not required, lines 10 - 27 can be safely removed. -->
+
+    <!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
+    <!--[if mso]>
+        <style>
+            * {
+                font-family: arial, sans-serif !important;
+            }
+        </style>
+    <![endif]-->
+
+    <!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ -->
+    <!--[if !mso]><!-->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+        <style>
+          @import url("https://use.typekit.net/adq7vro.css");
+        </style>
+    <!--<![endif]-->
+
+    <!-- Web Font / @font-face : END -->
+
+	<!-- CSS Reset -->
+    <style>
+
+        /* What it does: Remove spaces around the email design added by some email clients. */
+        /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+        html,
+        body {
+            margin: 0 auto !important;
+            padding: 0 !important;
+            height: 100% !important;
+            width: 100% !important;
+        }
+
+        /* What it does: Stops email clients resizing small text. */
+        * {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        /* What it does: Centers email on Android 4.4 */
+        div[style*="margin: 16px 0"] {
+            margin:0 !important;
+        }
+
+        /* What it does: Stops Outlook from adding extra spacing to tables. */
+        table,
+        td {
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
+        }
+
+        /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+        table {
+            border-spacing: 0 !important;
+            border-collapse: collapse !important;
+            table-layout: fixed !important;
+            margin: 0 auto !important;
+        }
+        table table table {
+            table-layout: auto;
+        }
+
+        /* What it does: Uses a better rendering method when resizing images in IE. */
+        img {
+            -ms-interpolation-mode:bicubic;
+        }
+
+        /* What it does: A work-around for iOS meddling in triggered links. */
+        *[x-apple-data-detectors] {
+            color: inherit !important;
+            text-decoration: none !important;
+        }
+
+        /* What it does: A work-around for Gmail meddling in triggered links. */
+        .x-gmail-data-detectors,
+        .x-gmail-data-detectors *,
+        .aBn {
+            border-bottom: 0 !important;
+            cursor: default !important;
+        }
+
+        /* What it does: Prevents Gmail from displaying an download button on large, non-linked images. */
+        .a6S {
+	        display: none !important;
+	        opacity: 0.01 !important;
+        }
+        /* If the above doesn't work, add a .g-img class to any image in question. */
+        img.g-img + div {
+	        display:none !important;
+	   	}
+
+        /* What it does: Prevents underlining the button text in Windows 10 */
+        .button-link {
+            text-decoration: none !important;
+        }
+
+        /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+        /* Create one of these media queries for each additional viewport size you'd like to fix */
+        /* Thanks to Eric Lepetit (@ericlepetitsf) for help troubleshooting */
+        @media only screen and (min-device-width: 375px) and (max-device-width: 413px) { /* iPhone 6 and 6+ */
+            .email-container {
+                min-width: 375px !important;
+            }
+        }
+
+    </style>
+
+    <!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
+	<!--[if gte mso 9]>
+	<xml>
+		<o:OfficeDocumentSettings>
+			<o:AllowPNG/>
+			<o:PixelsPerInch>96</o:PixelsPerInch>
+		</o:OfficeDocumentSettings>
+	</xml>
+	<![endif]-->
+
+    <!-- Progressive Enhancements -->
+    <style>
+
+        /* What it does: Hover styles for buttons */
+        .button-td,
+        .button-a {
+            transition: all 100ms ease-in;
+        }
+        .button-td:hover,
+        .button-a:hover {
+            background: #555555 !important;
+            border-color: #555555 !important;
+        }
+
+
+        /* Media Queries */
+
+        /*@media screen and (min-width: 540px) {
+            .mobile-logo,
+            .mobile-heading-br,
+            .mobile-dates-banner {
+                display: none;
+            }
+        }*/
+
+
+        @media screen and (max-width: 640px) {
+
+            /* What it does: Adjust typography on small screens to improve readability */
+            .email-container p {
+                /*font-size: 17px !important;*/
+                /*line-height: 22px !important;*/
+            }
+
+            .email-hero-td {
+                width: 400px !important;
+            }
+
+            .mobile-spacer {
+                height: 30px !important;
+            }
+
+            .mobile-td-aside {
+                padding: 16px 3px 20px !important;
+            }
+
+        }
+
+        @media screen and (max-width: 625px) {
+            .mobile-spacer {
+                height: 25px !important;
+            }
+
+            .mobile-heading-text {
+                font-size: 16px !important;
+                line-height: 16px !important;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .email-hero-td {
+                width: 385px !important;
+            }
+        }
+
+        @media screen and (max-width: 585px) {
+            .email-hero-td {
+                width: 365px !important;
+            }
+
+            .mobile-spacer {
+                height: 20px !important;
+            }
+        }
+
+        @media screen and (max-width: 565px) {
+            .email-hero-td {
+                width: 325px !important;
+            }
+
+            .mobile-spacer {
+                height: 10px !important;
+            }
+        }
+
+        @media screen and (max-width: 540px) {
+
+            .mobile-content,
+            .mobile-dates-banner,
+            .mobile-callout-img,
+            .mobile-heading-br {
+                display: block !important;
+				overflow: visible !important;
+				max-height: none !important;
+				visibility: visible !important;
+            }
+
+            .mobile-table-hide {
+            	display: table !important;
+            }
+
+            .desktop-logo,
+            .desktop-dates-banner,
+            .desktop-callout-img,
+            .desktop-heading-br {
+                display: none !important;
+            }
+
+            .mobile-td {
+                display: block !important;
+                width: 90% !important;
+                padding: 0 20px !important;
+            }
+
+            .mobile-td-main {
+                padding: 40px 20px 0 !important;
+            }
+
+            .mobile-td-aside {
+                font-size: 14px !important;
+                padding: 16px 0 20px !important;
+            }
+
+            .mobile-td-img {
+                padding-top: 20px !important;
+            }
+
+            .mobile-td-img img {
+                height: auto !important;
+            }
+
+            .mobile-logo img {
+                width: 120px;
+                height: 38px;
+            }
+
+            .mobile-divider {
+                width: 75% !important;
+            }
+
+            .mobile-hero-heading-td {
+                padding: 15px 0 0 24px !important;
+            }
+
+            .mobile-spacer {
+                display: none !important;
+            }
+
+            .email-hero-td {
+                width: 305px !important;
+            }
+
+            .callout-btn {
+                width: 176px !important;
+            }
+
+            .callout-section-last {
+                padding-bottom: 20px !important;
+            }
+        }
+
+        @media screen and (max-width: 470px) {
+            .desktop-heading-br {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 450px) {
+            .email-hero-td {
+                width: 250px !important;
+            }
+
+            .email-hero-td img {
+                height: 146px !important;
+            }
+
+            .mobile-heading-text {
+                font-size: 14px !important;
+                line-height: 14px !important;
+                letter-spacing: 0.54px !important;
+            }
+
+            .mobile-heading-text-bold {
+                font-size: 14px !important;
+                line-height: 14px !important;
+                letter-spacing: .81px !important;
+            }
+        }
+
+        @media screen and (max-width: 380px) {
+
+            .email-hero-td {
+                width: 230px !important;
+            }
+
+            .mobile-heading-text {
+                font-size: 14px !important;
+                line-height: 14px !important;
+            }
+
+            .mobile-hero-heading-td {
+                padding: 10px 0 0 24px !important;
+            }
+        }
+
+        @media screen and (max-width: 360px) {
+            .email-hero-td {
+                width: 200px !important;
+            }
+
+            .mobile-banner-td-left {
+                padding-right: 17px !important;
+            }
+        }
+
+    </style>
+
+</head>
+<body width="100%" bgcolor="#f3f3f3" style="margin: 0; mso-line-height-rule: exactly; background: #f3f3f3;">
+    <center style="width: 100%; background: #f3f3f3; text-align: left;">
+
+        <!-- Visually Hidden Preheader Text : BEGIN -->
+        <div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family: sans-serif;">
+            (Optional) This text will appear in the inbox preview, but not the email body.
+        </div>
+        <!-- Visually Hidden Preheader Text : END -->
+
+        <!--
+            Set the email width. Defined in two places:
+            1. max-width for all clients except Desktop Windows Outlook, allowing the email to squish on narrow but never go wider than 640px.
+            2. MSO tags for Desktop Windows Outlook enforce a 640px width.
+        -->
+        <div style="max-width: 640px; margin: auto;" class="email-container">
+            <!--[if mso]>
+            <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" width="640" align="center">
+            <tr>
+            <td>
+            <![endif]-->
+
+
+            <!-- Email Header : BEGIN -->
+
+            <!-- Logo Mobile-->
+			<div class="mobile-content" style="display:none; max-height: 0; overflow: hidden; visibility: hidden;">
+				<table role="presentation" bgcolor="#ffffff"aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 640px; display: none;" class="mobile-table-hide">
+                    <tr align="center">
+                        <td style="padding: 12px 0;">
+                        	<img src="img/emails/national-meeting/acs-logo.png" aria-hidden="true" width="150" height="48" alt="alt_text" border="0" style="height: auto;">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <!-- 2 Even Columns : BEGIN -->
+            <table role="presentation" bgcolor="#ffffff"aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 640px;">
+                <tr>
+                    <td bgcolor="#ffffff" align="center" height="100%" valign="top" width="100%">
+                        <table role="presentation" aria-hidden="true" border="0" cellpadding="0" cellspacing="0" align="center" width="100%">
+                            <tr>
+                                <td align="center" valign="top" width="40%" style="padding: 24px 0 10px 30px;" class="mobile-hero-heading-td">
+                                    <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;text-align: left;">
+
+                                        <!-- Logo Dekstop-->
+                                        <tr>
+                                            <td style="text-align: left;" class="desktop-logo">
+                                                <img src="img/emails/national-meeting/acs-logo.png" aria-hidden="true" width="150" height="48" alt="alt_text" border="0" style="display:block;">
+                                            </td>
+                                        </tr>
+
+                                        <!-- Spacer -->
+                                        <tr>
+                                            <td height="35" style="font-size: 0; line-height: 15px;" class="mobile-spacer">&nbsp;</td>
+                                        </tr>
+
+                                        <!-- Blue text -->
+                                        <tr>
+                                            <td style="font-family: 'futura-pt', 'Open Sans', arial; font-size: 20px; font-weight: 500; color: #4A6880; letter-spacing: .67px; line-height: 18px; mso-height-rule: exactly;" class="mobile-heading-text">
+                                                255TH <br class="mobile-heading-br" style="display: none;"> AMERICAN CHEMICAL SOCIETY
+                                            </td>
+                                        </tr>
+
+                                        <!-- Spacer -->
+                                        <tr>
+                                            <td height="6" style="font-size: 0; line-height: 6px;">&nbsp;</td>
+                                        </tr>
+
+                                        <!-- Black text -->
+                                        <tr>
+                                            <td style="font-family: 'futura-pt-bold', 'Open Sans', arial, arial; font-size: 18px; font-weight: 700; color: #58585B; letter-spacing: 1.04px; line-height: 18px; mso-height-rule: exactly;" class="mobile-heading-text-bold">
+                                                NATIONAL <br class="mobile-heading-br" style="display: none;"> MEETING <br class="desktop-heading-br"> &amp; EXPOSITION
+                                            </td>
+                                        </tr>
+
+                                        <!-- Spacer -->
+                                        <tr>
+                                            <td height="23" style="font-size: 0; line-height: 15px;">&nbsp;</td>
+                                        </tr>
+
+                                        <!-- Date/location -->
+                                        <tr class="desktop-dates-banner">
+                                            <td>
+                                                <table align="left">
+                                                    <tr>
+                                                        <td align="left" style="padding-right:10px;">
+                                                            <table>
+                                                                <tr>
+                                                                    <td style="vertical-align: top; line-height: 12px; padding-right: 5px;"><img src="img/emails/national-meeting/red-dot.png" alt=""></td>
+                                                                    <td style="vertical-align: top; color: #58585B; font-family: 'futura-pt', 'Open Sans', arial; font-size: 11px; font-weight: 500; letter-spacing: 0.64px; line-height: 12px; mso-height-rule: exactly; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;">
+                                                                        MARCH 2018<br><span style="font-family: 'futura-pt-bold', 'Open Sans', arial; font-weight: 700;">18-22</span>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                        <td align="left">
+                                                            <table>
+                                                                <tr>
+                                                                    <td style="vertical-align: top; line-height: 12px; padding-right: 5px;"><img src="img/emails/national-meeting/red-dot.png" alt=""></td>
+                                                                    <td style="vertical-align: top; color: #58585B; font-family: 'futura-pt', 'Open Sans', arial; font-size: 11px; font-weight: 500; letter-spacing: 0.64px; line-height: 12px; mso-height-rule: exactly; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;">
+                                                                        NEW ORLEANS<br><span style="font-family: 'futura-pt-bold', 'Open Sans', arial; font-weight: 700;">LOUISIANA</span>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td align="center" width="415px" class="email-hero-td">
+                                    <img src="img/emails/national-meeting/acs-header.png" aria-hidden="true" width="415" style="display: block; width: 100%;" class="g-img">
+                                </td>
+                            </tr>
+                        </table>
+
+						<!-- Date/location Mobile -->
+                        <!--[if !mso]><!-->
+                        <!--<![endif]-->
+                    </td>
+                </tr>
+            </table>
+
+            <div class="mobile-content" style="display:none;max-height:0px;overflow:hidden;visibility:hidden;">
+				<table role="presentation" aria-hidden="true" border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="display: none;" class="mobile-table-hide">
+					<tr class="mobile-dates-banner" align="center" bgcolor="#E1EFF2">
+						<td style="padding: 10px 0;">
+							<table align="center" style="mso-hide:all;">
+								<tr>
+									<td align="left" style="padding-right:40px;" class="mobile-banner-td-left">
+										<table style="mso-hide:all;">
+											<tr>
+												<td style="vertical-align: top; line-height: 12px; padding-right: 5px;"><img src="img/emails/national-meeting/red-dot.png" alt=""></td>
+												<td style="vertical-align: top; color: #58585B; font-family: 'futura-pt', 'Open Sans', arial; font-size: 10px; font-weight: 500; letter-spacing: 0.58px; line-height: 12px; mso-height-rule: exactly; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;">
+													MARCH 2018 <span style="font-family: 'futura-pt-bold', 'Open Sans', arial; font-size: 10px; font-weight: 700;">18-22</span>
+												</td>
+											</tr>
+										</table>
+									</td>
+									<td align="left">
+										<table style="mso-hide:all;">
+											<tr>
+												<td style="vertical-align: top; line-height: 12px; padding-right: 5px;"><img src="img/emails/national-meeting/red-dot.png" alt=""></td>
+												<td style="vertical-align: top; color: #58585B; font-family: 'futura-pt', 'Open Sans', arial; font-size: 10px; font-weight: 500; letter-spacing: 0.58px; line-height: 12px; mso-height-rule: exactly; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;">
+													NEW ORLEANS <span style="font-family: 'futura-pt-bold', 'Open Sans', arial; font-size: 10px; font-weight: 700;">LOUISIANA</span>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+            <!-- Email Header : END -->
+
+            <!-- Email Body : BEGIN -->
+            <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 640px;">
+
+                <!-- Clear Spacer : BEGIN -->
+                <tr>
+                    <td height="20" style="font-size: 0; line-height: 0;">
+                        &nbsp;
+                    </td>
+                </tr>
+                <!-- Clear Spacer : END -->
+
+                <!-- 1 Main Column Text + Divider : BEGIN -->
+                <tr>
+                    <td bgcolor="#ffffff">
+                        <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding: 40px 40px 0; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;" class="mobile-td-main">
+                                    <h1 style="margin: 0 0 10px 0; font-family: 'futura-pt-bold', 'Open Sans', arial; font-size: 28px; line-height: 32px; color: #4A6880; font-weight: 700; text-transform: uppercase">Mauris non tempor quam</h1>
+                                    <p style="margin: 0; font-family: 'Open Sans', arial; font-size: 16px; line-height: 22px; color: #1A1A1A;">Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum quis nunc sollicitudin ultrices. Donec euismod scelerisque ligul.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 20px 0 22px 0" align="center">
+                                    <img src="img/emails/national-meeting/line.png" style="max-width: 100%; height: auto;" class="mobile-divider">
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- 1 Main Column Text + Divider : END -->
+
+                <!-- 2 Even Columns : BEGIN -->
+                <tr>
+                    <td bgcolor="#ffffff" align="center" height="100%" valign="top" width="100%" style="padding-bottom: 40px">
+                        <table role="presentation" aria-hidden="true" border="0" cellpadding="0" cellspacing="0" align="center" width="100%">
+                            <tr>
+                                <td width="60%" class="mobile-td" style="padding: 0 40px 20px; font-family: 'Open Sans', arial; font-size: 15px; line-height: 20px; color: #555555;  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;" >
+                                    <h2 style="margin: 0 0 10px 0; font-family: 'Open Sans', arial; font-size: 22px; line-height: 21px; color: #58585B; font-weight: 600;">Praesent nec elit non dolor consectetur</h2>
+                                    <p style="margin: 0; font-family: 'Open Sans', arial; font-size: 14px; color: #1A1A1A;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor. Ut eget imperdiet neque. In volutpat ante semper diam molestie, et aliquam erat laoreet. Sed sit amet arcu aliquet, molestie justo at, auctor nunc. Phasellus ligula ipsum, volutpat eget semper id, viverra eget nibh.</p><br>
+                                    <p style="margin: 0; font-family: 'Open Sans', arial; font-size: 14px; color: #1A1A1A;">Suspendisse luctus mattis cursus. Nam consectetur ante at nisl hendrerit gravida. Donec vehicula rhoncus mattis. Mauris <a href="#TODO" style="color: #4A6880">dignissim semper mattis.</a> Fusce porttitor a mi at suscipit. Praesent facilisis dolor sapien, vel sodales augue mollis ut. Mauris venenatis magna eu tortor posuere luctus. </p><br>
+                                    <p style="margin: 0; font-family: 'Open Sans', arial; font-size: 14px; color: #1A1A1A;">Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque. Ut porta viverra est, ut dignissim elit elementum ut. Nunc vel.</p>
+                                </td>
+
+                                <td align="center" valign="top" width="40%" style="padding-right: 40px;" class="mobile-td">
+                                    <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;text-align: left;">
+                                        <tr>
+                                            <td style="text-align: center;" class="mobile-td-img">
+                                                <img src="img/emails/national-meeting/placeholder_img_small.png" aria-hidden="true" width="200" height="180" alt="alt_text" border="0" align="center" style="width: 100%; max-width: 100%; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="margin: 0; padding: 16px 17px 20px; font-family: 'Open Sans', arial; font-size: 12px; color: #1A1A1A; text-align: left;" class="stack-column-center mobile-td-aside">
+                                                Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquam. In imperdiet eros id lacus vestibulum vestibulum.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-family: 'Open Sans', arial; font-size: 16px; line-height: 20px; color: #ffffff;">
+                                                <!-- Button : BEGIN -->
+                                                <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto;">
+                                                    <tr>
+                                                        <td style="text-align: center;">
+                                                            <a href="#TODO" style="width: 154px; background: #4A6880; border: 12px solid #4A6880; font-family: sans-serif; font-size: 16px; line-height: 1.1; text-align: center; text-decoration: none; display: block; font-weight: semibold;" class="callout-btn">
+                                                                <span style="color:#ffffff;" class="button-link">&nbsp;&nbsp;&nbsp;&nbsp;BUTTON&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!-- Button : END -->
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- Two Even Columns : END -->
+
+
+                <!-- Divier + Links -->
+                <tr bgcolor="#ffffff">
+                    <td style="padding: 0 0 22px;" align="center">
+                        <img src="img/emails/national-meeting/line.png" style="max-width: 100%; height: auto;" class="mobile-divider">
+                    </td>
+                </tr>
+
+                <tr bgcolor="#ffffff">
+                    <td style="padding: 0 0 26px; font-family: 'Open Sans', arial; font-size: 10px; color: rgba(30,41,48,0.50); text-transform: uppercase">
+                        <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto;">
+                            <tr>
+                                <td style="padding: 0 10px;">
+                                    <webversion style="text-decoration: none; color:inherit;">Web Version</webversion>
+                                </td>
+                                <td style="padding: 0 10px;">
+                                    <a href="#TODO" style="text-decoration: none; color: inherit;">Forward To A Friend</a>
+                                </td>
+                                <td>
+                                    <ubsubscribe style="text-decoration: none; color: inherit;">Unsubscribe</ubsubscribe>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- Divider + Links : END -->
+
+            </table>
+            <!-- Email Body : END -->
+
+            <!-- Email Footer : BEGIN -->
+            <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 680px;">
+                <tr>
+                    <td style="width: 100%; font-family: 'Open Sans', arial; font-size: 10px; color: rgba(30,41,48,0.50); line-height:18px; text-align: center;" class="x-gmail-data-detectors" valign="top">
+                        <br><br>
+                        American Chemical Soviety<br>1155 Sixteenth Street, NW, Washington, DC, 20036 US<br>1-800-333-9511
+                        <br><br>
+                    </td>
+                </tr>
+            </table>
+            <!-- Email Footer : END -->
+
+            <!--[if mso]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+        </div>
+    </center>
+</body>
+</html>

@@ -98,7 +98,7 @@ gulp.task('copy', ['bootstrap', 'jquery', 'fontawesome', 'magnific-popup', 'scro
 gulp.task('browserSync', function() {
     browserSync.init({
         server: {
-            baseDir: ''
+            baseDir: './'
         },
     })
 })

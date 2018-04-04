@@ -57,6 +57,14 @@
             preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
         },
         image: {
+            titleSrc: 'title',
+             titleSrc: function(item) {
+                 if (item.el.attr('title') === "None") {
+                     return;
+                 } else {
+                     return '<a href="' + item.el[0].getAttribute('data-url') + '" target="_blank" class="btn btn-primary badge">' + item.el.attr('title') + '</a>';     
+                 }
+             },
             tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
         }
     });

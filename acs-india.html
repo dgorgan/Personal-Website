@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:v="urn:schemas-microsoft-com:vml"
+ xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115024729-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-115024729-1');
+    </script>
+
+    <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+
+    <!-- Web Font / @font-face : BEGIN -->
+	<!-- NOTE: If web fonts are not required, lines 10 - 27 can be safely removed. -->
+    <link rel="stylesheet" href="https://use.typekit.net/kxi1jtu.css">
+
+
+    <!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
+    <!--[if mso]>
+        <style>
+            * {
+                font-family: arial, sans-serif !important;
+            }
+        </style>
+    <![endif]-->
+
+    <!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ -->
+    <!--[if !mso]><!-->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+    <!--<![endif]-->
+
+    <!-- Web Font / @font-face : END -->
+
+	<!-- CSS Reset -->
+    <style>
+
+        /* What it does: Remove spaces around the email design added by some email clients. */
+        /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+        html,
+        body {
+            margin: 0 auto !important;
+            padding: 0 !important;
+            height: 100% !important;
+            width: 100% !important;
+        }
+
+        /* What it does: Stops email clients resizing small text. */
+        * {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        /* What it does: Centers email on Android 4.4 */
+        div[style*="margin: 16px 0"] {
+            margin:0 !important;
+        }
+
+        /* What it does: Stops Outlook from adding extra spacing to tables. */
+        table,
+        td {
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
+        }
+
+        /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+        table {
+            border-spacing: 0 !important;
+            border-collapse: collapse !important;
+            table-layout: fixed !important;
+            margin: 0 auto !important;
+        }
+        table table table {
+            table-layout: auto;
+        }
+
+        /* What it does: Uses a better rendering method when resizing images in IE. */
+        img {
+            -ms-interpolation-mode:bicubic;
+        }
+
+        /* What it does: A work-around for iOS meddling in triggered links. */
+        *[x-apple-data-detectors] {
+            color: inherit !important;
+            text-decoration: none !important;
+        }
+
+        /* What it does: A work-around for Gmail meddling in triggered links. */
+        .x-gmail-data-detectors,
+        .x-gmail-data-detectors *,
+        .aBn {
+            border-bottom: 0 !important;
+            cursor: default !important;
+        }
+
+        /* What it does: Prevents Gmail from displaying an download button on large, non-linked images. */
+        .a6S {
+	        display: none !important;
+	        opacity: 0.01 !important;
+        }
+        /* If the above doesn't work, add a .g-img class to any image in question. */
+        img.g-img + div {
+	        display:none !important;
+	   	}
+
+        /* What it does: Prevents underlining the button text in Windows 10 */
+        .button-link {
+            text-decoration: none !important;
+        }
+
+        /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+        /* Create one of these media queries for each additional viewport size you'd like to fix */
+        /* Thanks to Eric Lepetit (@ericlepetitsf) for help troubleshooting */
+        @media only screen and (min-device-width: 375px) and (max-device-width: 413px) { /* iPhone 6 and 6+ */
+            .email-container {
+                min-width: 375px !important;
+            }
+        }
+
+    </style>
+
+    <!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
+	<!--[if gte mso 9]>
+	<xml>
+		<o:OfficeDocumentSettings>
+			<o:AllowPNG/>
+			<o:PixelsPerInch>96</o:PixelsPerInch>
+		</o:OfficeDocumentSettings>
+	</xml>
+	<![endif]-->
+
+    <!-- Progressive Enhancements -->
+    <style>
+
+        /* What it does: Hover styles for buttons */
+        .button-td,
+        .button-a {
+            transition: all 100ms ease-in;
+        }
+        .button-td:hover,
+        .button-a:hover {
+            background: #4b8bca !important;
+            border-color: #4b8bca !important;
+        }
+
+        .mobile-content {
+        	display: none;
+        }
+
+        ul {
+            text-align: left !important;
+        }
+
+        /* Media Queries */
+        @media screen and (max-width: 650px) {
+            .mobile-table,
+            table {
+                width: 100% !important;
+            }
+
+            .cta-button {
+            	width: 	220px !important;
+            }
+
+            .footer-links-table {
+            	width: auto !important;
+            }
+
+            .desktop-heading {
+                max-width: 100% !important;
+            }
+        }
+        @media screen and (max-width: 560px) {
+
+            /* What it does: Adjust typography on small screens to improve readability */
+			.email-container p {
+				font-size: 17px !important;
+				line-height: 22px !important;
+			}
+
+            /* What it does: Makes Inbox by Gmail (iOS) respect full body width */
+            .body {
+                min-width:100vw;
+            }
+
+            .mobile-content {
+                display: block !important;
+                overflow: visible !important;
+                max-height: none !important;
+                visibility: visible !important;
+            }
+
+            .mobile-td {
+                display: block !important;
+                width: 90% !important;
+                padding: 0 20px !important;
+            }
+
+            .speaker-bio-wrap {
+                text-align: center !important;
+            }
+
+            .speaker-img-wrap {
+                text-align: center !important;
+            }
+
+            .speaker-img-wrap img {
+/*                 width: 200px !important
+                height: auto !important; */
+            }
+
+            .callout-btn-wrap {
+                width: 200px !important;
+            }
+
+            .callout-btn-td {
+                padding-top: 89px !important;
+            }
+
+			.mobile-pad {
+				padding: 20px !important;
+			}
+
+            .mobile-table-hide {
+                display: block !important;
+            }
+
+            .desktop-hide {
+                display: none !important;
+            }
+
+            .social-icons-wrap {
+                padding-right: 20px !important;
+            }
+
+            .acs-logo-wrap {
+                padding-left: 20px !important;
+            }
+
+            .acs-logo {
+                width: 110px !important;
+                height: 35px !important;
+            }
+
+            .special-offer-pad {
+                padding: 9px 16px !important;
+            }
+
+            .mobile-speaker-bio {
+                text-align: center;
+            }
+
+            .mobile-speaker-position {
+                max-width: 50%;
+            }
+
+            .tablet-center {
+                text-align: center;
+            }
+
+            .right-bio {
+                padding-left: 60px !important;
+            }
+
+            .mobile-ul {
+                width: 100% !important;
+                padding-left: 20px !important;
+            }
+
+            .hr {
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+        }
+
+        @media screen and (max-width: 420px) {
+            .mobile-speaker-bio {
+                text-align: left;
+            }
+
+            .mobile-speaker-position {
+                max-width: 100%;
+            }
+
+            .tablet-center {
+                text-align: left;
+            }
+
+            .right-bio {
+                padding-left: 20px !important;
+            }
+        }
+
+    </style>
+
+</head>
+<body width="100%" bgcolor="#ffffff" style="margin: 0; mso-line-height-rule: exactly;" class="body">
+    <center style="width: 100%; background: #ffffff; text-align: left;">
+	<table role="presentation" bgcolor="#ffffff" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width="100%">
+		<tr>
+			<td align="center">
+		        <!-- Visually Hidden Preheader Text : BEGIN -->
+		        <div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family: 'Open Sans', arial;">
+		            (Optional) This text will appear in the inbox preview, but not the email body.
+		        </div>
+		        <!-- Visually Hidden Preheader Text : END -->
+
+		        <!--
+		            Set the email width. Defined in two places:
+		            1. max-width for all clients except Desktop Windows Outlook, allowing the email to squish on narrow but never go wider than 720px.
+		            2. MSO tags for Desktop Windows Outlook enforce a 720px width.
+		        -->
+		        <div style="max-width: 720px; margin: auto;" class="email-container" width="100%">
+		            <!--[if mso]>
+		            <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" width="720" align="center" style="max-width: 720px; margin: auto;">
+		            <tr>
+		            <td>
+		            <![endif]-->
+
+		            <!-- Email Header : BEGIN -->
+		            <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width="720" style="display: block; width: 100% !impotant; max-width: 720px; margin: auto">
+                        <tr>
+                          <td bgcolor="#ffffff" height="75">
+                              <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" width="100%" style="width: 100% !impotant; max-width: 720px;">
+                                  <tr>
+                                      <td style="padding-left: 40px;" class="acs-logo-wrap">
+                                         <img src="img/emails/acs-india/acs-logo.jpg" alt="ACS Chem Logo" width="147" height="46" class="acs-logo">
+                                      </td>
+                                      <td align="right" style="padding-right: 46px;" valign="middle" class="social-icons-wrap">
+                                          <span class="desktop-hide" style="vertical-align: super; padding-right: 10px; color: #979797; font-size: 12px; font-family: 'Open Sans', arial; font-weight: 600; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;">Let's connect:</span>
+                                          <a href="https://www.facebook.com/sharer/sharer.php?u=acssymposium.org.in" style="text-decoration: none; padding-right: 10px;">
+                                              <img src="img/emails/acs-india/facebook-logo.png" width="20" height="20" alt="Facebook">
+                                          </a>
+                                          <a href="https://twitter.com/home?status=http://acssymposium.org.in" style="text-decoration: none; padding-right: 10px;">
+                                              <img src="img/emails/acs-india/twitter-logo.png" width="20" height="20" alt="Twitter">
+                                          </a>
+                                          <a href="mailto:acsindustrysymposium@acs.org" style="text-decoration: none; padding-right: 10px;">
+                                              <img src="img/emails/acs-india/mail-logo.png" width="20" height="20" alt="Email">
+                                          </a>
+                                          <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Facssymposium.org.in&title=ACS%20Industry%20Symposium&source=LinkedIn" style="text-decoration: none;">
+                                              <img src="img/emails/acs-india/linkedin-logo.png" width="20" height="20" alt="LinkedIn">
+                                          </a>
+                                      </td>
+                                  </tr>
+                              </table>
+                          </td>
+                      </tr>
+
+                    <!-- Hero Image : BEGIN -->
+                        <tr>
+                            <td bgcolor="#F4F4F4" style="padding: 20px 40px 28px; max-width: 720px; margin: auto" class="desktop-hide" width="100%">
+                                <img src="img/emails/acs-india/acs-india-header.png" aria-hidden="true" width="640" height="" alt="alt_text" border="0" align="center" style="display:block; width: 100%; height: auto; background: #dddddd; font-family: 'Open Sans', arial; font-size: 15px; line-height: 20px; color: #555555;" class="g-img" alt="ACS Chem">
+                            </td>
+
+                            <div class="mobile-content" style="display:none; max-height:0px; overflow:hidden; visibility:hidden;">
+                                    <td class="mobile-content" style="display:none; max-height:0px; overflow:hidden; visibility:hidden;">
+                                        <table role="presentation" aria-hidden="true" border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="display: none; mso-hide:all;" class="mobile-table-hide">
+                                            <tbody>
+                                                <tr align="center" bgcolor="#E1EFF2">
+                                                    <td style="padding: 0;">
+                                                        <img src="img/emails/acs-india/acs-india-mobile-header.png" aria-hidden="true" width="640" height="" alt="alt_text" border="0" align="center" style="display: block; width: 100%; height: auto; background: #dddddd; font-family: 'Open Sans', arial; font-size: 15px; line-height: 20px; color: #555555;" class="g-img" Alt="ACS Chem">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                	</td>
+                            </div>
+                        </tr>
+                    <!-- Hero Image: END -->
+
+
+		            </table>
+		            <!-- Email Header : END -->
+
+
+		            <!-- Email Body : BEGIN -->
+		            <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 720px; background-color: #f4f4f4; margin: auto !important;" bgcolor="#F4F4F4">
+                        <tr>
+                            <td bgcolor="#F4F4F4">
+                                    <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width="640" style="max-width: 640px !important; margin: auto !important;" bgcolor="#ffffff">
+                                                <td bgcolor="#ffffff">
+
+                                						<!-- Main Callout Text Section : BEGIN -->
+                                		                <tr>
+                                		                    <td bgcolor="#ffffff">
+                                		                        <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" width="640">
+                                		                            <tr>
+                                		                                <td class="mobile-pad" style="padding: 20px 40px 0; font-family: 'Open Sans', arial; font-size: 15px; line-height: 20px; mso-height-rule: exactly; color: #ffffff;">
+                                											<table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                												<tr>
+                                													<td style="font-family: 'Open Sans', arial; font-size: 14px; font-weight: 400; line-height: 19px; color: #1A1A1A; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; text-align: left;">
+                                														<h2 style="margin-top: 4px; margin-bottom: 14px; font-size: 28px; font-weight: 400; color: #3F2159; line-height: 38px; text-transform: uppercase;">Mauris non tempor quam</h2>
+                                                                                        <p style="margin-bottom: 0; font-size: 16px; line-height: 22px; color: #1A1A1A;">Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum quis nunc sollicitudin ultrices. Donec euismod scelerisque ligul.</p>
+                                													</td>
+                                												</tr>
+                                											</table>
+                                		                                </td>
+                                		                            </tr>
+                                		                        </table>
+                                		                    </td>
+                                		                </tr>
+                                		                <!-- Main Callout Text Section : END -->
+
+
+                                                        <!-- HR Line : BEGIN -->
+                                                        <tr>
+                                                            <td style="padding: 18px 40px; text-align: center" bgcolor="#ffffff" class="hr">
+                                                                <hr style="background-color: #DDDDDD; height: 1px; border: 0;">
+                                                            </td>
+                                                        </tr>
+                                                        <!-- HR Line : END -->
+
+                                                        <!-- 2 Even Columns : BEGIN -->
+                                                        <tr>
+                                                            <td bgcolor="#ffffff" align="center" height="100%" valign="top" width="100%" style="padding-bottom: 40px; text-align: left !important;">
+                                                                <table role="presentation" aria-hidden="true" border="0" cellpadding="0" cellspacing="0" align="center" width="100%">
+                                                                    <tr>
+                                                                        <td width="52%" class="mobile-td mobile-pad tablet-center" style="padding: 0 49px 0 40px; font-family: 'Open Sans', arial; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;">
+                                                                            <h2 style="max-width: 80%; margin: 0; font-family: 'Open Sans', arial; font-size: 22px; line-height: 26px; mso-height-rule: exactly; color: #79797C; font-weight: 400; text-align: left;" class="desktop-heading">Praesent nec elit non dolor consectetur</h2>
+                                                                            <p style="margin-bottom: 0; margin-top: 13px; font-size: 14px; line-height: 19px; color: #1A1A1A;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor. Ut eget imperdiet neque. In volutpat ante semper diam molestie, et aliquam erat laoreet.</p>
+
+                                                                            <ul style="padding-left: 38px; padding-top: 10px; padding-bottom: 10px; max-width: 85%; font-size: 14px;" class="mobile-ul">
+                                                                                <li style="margin-bottom: 5px; padding-left: 10px; color: #E57200;">
+                                                                                    <span style="color: #1A1A1A;">
+                                                                                        <span style="font-weight: 600;">Curabitur Arcu Erat:</span> pellentesque in ipsum id orci porta dapibus mauris blandit aliquet elit, eget tincidunt nibh pulvinar.
+                                                                                    </span>
+                                                                                </li>
+                                                                                <li style="margin-bottom: 5px; padding-left: 10px; color: #E57200;">
+                                                                                    <span style="color: #1A1A1A;">
+                                                                                        <span style="font-weight: 600;">Curabitur Arcu Erat:</span>
+                                                                                    </span>
+                                                                                    <ul style="margin-top: 10px; list-style-type: square;" class="mobile-ul">
+                                                                                        <li style="margin-bottom: 5px; padding-left: 10px; color: #E57200;"><span style="color: #1A1A1A;">Lorem Ipsum dolor sit amet</span></li>
+                                                                                        <li style="margin-bottom: 5px; padding-left: 10px; color: #E57200;"><span style="color: #1A1A1A;">Quisque arcu neque, pretium</span></li>
+                                                                                        <li style="margin-bottom: 5px; padding-left: 10px; color: #E57200;">
+                                                                                            <span style="color: #1A1A1A;">Nunc volutpat, ex ut cursus</span>
+                                                                                            <ul style="margin-top: 10px; list-style-type: square;" class="mobile-ul">
+                                                                                                <li style="margin-bottom: 5px; padding-left: 10px; color: #E57200;"><span style="color: #1A1A1A;">Nulla quis lorem</span></li>
+                                                                                            </ul>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </li>
+                                                                            </ul>
+
+                                                                            <p style="margin-bottom: 0; margin-top: 0; font-size: 14px; line-height: 19px; color: #1A1A1A;">Suspendisse luctus mattis cursus. Nam consectetur ante at nisl hendrerit gravida. Donec vehicula rhoncus mattis. Mauris dignissim semper mattis. Fusce porttitor a mi at suscipit. Praesent facilisis dolor sapien, vel sodales.</p>
+                                                                        </td>
+
+                                                                        <td align="center" valign="top" width="28%" style="padding-right: 40px;" class="mobile-td">
+                                                                            <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;text-align: left;">
+                                                                                <tr>
+                                                                                    <td class="mobile-td-img speaker-img-wrap" align="left">
+                                                                                        <img src="img/emails/acs-india/harish-headshot.png" aria-hidden="true" width="154" height="193" alt="alt_text" border="0" align="center" style="max-width: 100%; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+                                                                                    </td>
+                                                                                </tr>
+
+                                                                                <tr>
+                                                                                    <td style="margin: 0; padding: 9px 0 17px; font-family: 'Open Sans', arial; font-size: 12px; color: #1A1A1A; text-align: left; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;" class="stack-column-center mobile-td-aside speaker-bio-wrap">
+                                                                                        <p style="font-weight: 600; margin: 0">Harish Iyer, Ph.D.</p>
+                                                                                        <p style="margin: 0;">Bill and Melinda Gates <br> Foundation, India</p>
+                                                                                    </td>
+                                                                                </tr>
+
+                                                                                <tr>
+                                                                                    <td style="font-family: 'Open Sans', arial; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;">
+                                                                                        <p style="margin-bottom: 0; margin-top: 0; font-size: 14px; line-height: 19px; color: #1A1A1A;">Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet.</p>
+                                                                                    </td>
+                                                                                </tr>
+
+
+                                                                                <tr>
+                                                                                    <td style="padding-top: 24px; font-family: 'Open Sans', arial; font-size: 16px; line-height: 20px; color: #ffffff;" class="callout-btn-td">
+                                                                                        <!-- Button : BEGIN -->
+                                                                                        <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto;" class="callout-btn-wrap">
+                                                                                            <tr>
+                                                                                                <td style="border-radius: 20px; background: #E57200; text-align: center;" class="button-td" width="180">
+                                                                                                    <a href="#TODO" style="background: #E57200; border: 12px solid #E57200; font-family: 'open sans', arial; font-size: 16px; line-height: 19px; text-align: center; text-decoration: none; display: block; border-radius: 20px; font-weight: 400;" class="callout-btn">
+                                                                                                        <span style="color:#ffffff;" class="button-link">&nbsp;&nbsp;&nbsp;&nbsp;BUTTON&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                                                                                    </a>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </table>
+                                                                                        <!-- Button : END -->
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <!-- Two Even Columns : END -->
+
+
+
+                                                        <!-- HR Line : BEGIN -->
+                                                        <tr>
+                                                            <td style="padding: 16px 40px 16px 40px; text-align: center" bgcolor="#ffffff" class="hr">
+                                                                <hr style="background-color: #DDDDDD; height: 1px; border: 0;">
+                                                            </td>
+                                                        </tr>
+                                                        <!-- HR Line : END -->
+
+                                                        <!-- Unsubscribe + Links : BEGIN -->
+                                                        <tr bgcolor="#ffffff">
+                                                            <td style="padding: 0px 0px 26px; font-family: 'Open Sans', arial; font-size: 13px; margin: auto" align="center">
+                                                                <table align="center" aria-hidden="true" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%" style="width: 640px; margin: auto; text-align: center;">
+                                                                    <tbody style="font-family: 'Open Sans', arial; font-size: 10px; color: #b3b5b5; text-transform: uppercase">
+                                                                        <tr>
+                                                                            <td align="center" style="margin: auto; text-align: center;">
+                                                                                <webversion style="text-decoration: none; color: #b3b5b5;"> Web Version </webversion>
+                                                                                &nbsp;&nbsp;&nbsp;
+                                                                                <a href="#TODO" style="text-decoration: none; color: #b3b5b5;">Forward To A Friend</a>
+                                                                                &nbsp;&nbsp;&nbsp;
+                                                                                <a href="#" style="text-decoration: none; color:#b3b5b5;">Unsubscribe</a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <!-- Unsubscribe + Links : END -->
+                                                    </td>
+
+                		                        </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                		            <!-- Email Body : END -->
+
+                		            <!-- Email Footer : BEGIN -->
+                		            <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 720px; margin: auto;" bgcolor="#f4f4f4">
+                		                <tr>
+                		                    <td style="padding: 16px 10px; width: 100%; font-family: 'Open Sans', arial; font-size: 10px; font-weight: 400; line-height: 18px; mso-height-rule: exactly; text-align: center; color: rgba(30,41,48,0.50);" class="x-gmail-data-detectors">
+                		                        American Chemical Society<br>1155 Sixteenth Street, NW, Washington, DC 20036, USA<br>1-800-333-9511
+                		                    </td>
+                		                </tr>
+                		            </table>
+                		            <!-- Email Footer : END -->
+
+                		            <!--[if mso]>
+                		            </td>
+                		            </tr>
+                		            </table>
+                		            <![endif]-->
+                		        </div>
+                			</td>
+                		</tr>
+	    </table>
+	</center>
+</body>
+</html>

@@ -38,12 +38,19 @@ h4,
 h5,
 h6 {
     .sans-serif-font;
+    font-weight: 700;
 }
 
 p {
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 20px;
+}
+
+ul.inline-list {
+    display: inline-block;
+    text-align: left;
+    padding-left: 5px;
 }
 
 .bg-primary {
@@ -186,7 +193,8 @@ header {
             }
             p {
                 font-weight: 300;
-                color: fade(white, 70%);
+                // color: fade(white, 70%);
+                color: white;
                 font-size: 16px;
                 margin-bottom: 50px;
             }
@@ -225,14 +233,53 @@ header {
     margin-top: 0;
 }
 
+#services {
+    @media (max-width: 1000px) {
+        padding: 100px 0 50px;
+    }
+
+    @media (max-width: 400px){
+        .col-md-6  {
+            width: 100%;
+        }
+    }
+}
+
 .service-box {
     max-width: 400px;
     margin: 50px auto 0;
+    min-height: 265px;
     @media (min-width: 992px) {
         margin: 20px auto 0;
     }
+
     p {
         margin-bottom: 0;
+    }
+}
+
+.skills-container {
+    // .col-md-6 {
+    //     width: 49.9%;
+    // }
+}
+
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+
+    .flex-col {
+        padding-left: 0;
+        padding-right: 0;
+
+        @media (min-width: 767px) {
+            width: 49.9%;
+        }
+
+        @media (min-width: 1200px){
+            width:33.3%;
+        }
+
     }
 }
 
@@ -240,7 +287,9 @@ header {
     position: relative;
     display: block;
     max-width: 650px;
-    margin: 0 auto;
+    margin: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+
     .portfolio-box-caption {
         color: white;
         opacity: 0;
@@ -274,6 +323,8 @@ header {
         }
     }
     &:hover {
+        transform: translateY(-16px);
+
         .portfolio-box-caption {
             opacity: 1;
         }
